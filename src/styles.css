@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primary: #1DA1F2;
+    --color-primary-dark: #1E0E62;
+    --color-secondary: #482BE7;
+    --color-background-dark: #2F1893;
+    --color-text-dark: #141414;
+    --color-text-muted:#EBEAED;
+    --color-teal:#25DAC5;
+    --color-red: #EA3223;
+    --color-red-light: #E93A7D;
+    --color-white: #FFFFFF;
+    --font-family: 'DM Sans', sans-serif;
+    --max-width: 1140px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-background-dark);
+    color: var(--color-white);
+    scroll-behavior: smooth;
+}
+h1,h2,h3,p {
+    margin: 0;
+}
+
+button{
+    font-family: var(--font-family);
+    cursor: pointer;
+    border: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 90px 35px;
+}
+
+.btn {
+    color: var(--color-white);
+    padding: 12px 30px;
+    border-radius: 70px;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-teal {
+    background-color: var(--color-teal);
+}
+.btn-red {
+    background-color: var(--color-red);
+}
+.btn-red-light {
+    background-color: var(--color-red-light);
+}
+.btn-secondary {
+    background-color: var(--color-secondary);
+}
+.btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
