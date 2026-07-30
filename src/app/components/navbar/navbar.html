@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <div class="navbar_context">
+
+        <div class="navbar_link">
+            @for(link of navLinks; track link){
+                <a routerLink="{{ link | lowercase }}" href="#">{{ link }}</a>
+            }
+        </div>
+        <div class="navbar_link">
+            @for(icon of navIcons; track icon){
+             <a routerLink="{{ icon | lowercase }}" href="#">
+                <ng-icon [name]="icon" size="25" ></ng-icon>
+             </a>   
+            }
+        </div>
+    </div>
+</nav>
