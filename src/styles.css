@@ -21,7 +21,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
-    background-color: var(--color-background-dark);
+    background-color: black;
     color: var(--color-white);
     scroll-behavior: smooth;
 }
