@@ -3,8 +3,8 @@
     background-color: var(--color-background-dark);
     height: 80vh;
     margin-top: 2rem;
-position: relative;
-overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 .features_content {
     max-width: var(--max-width);
@@ -89,4 +89,42 @@ flex: 0 0 21.875rem;
 }
 .feature_dot.active {
     opacity: 1;
+}
+
+@media (max-width: 700px){
+.features_content {
+    display: grid;
+}
+.feature_image img{
+    max-width: 10rem;
+    position: absolute;
+    left: 0;
+}
+.image_laptop{
+    top: 1.6%;
+    height: 7rem;
+}
+.image_layer{
+    top: 2.2%;
+    width: 4.5rem;
+    height: 6.3rem;
+}
+.feature_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.feature_subtitle {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    max-width: 32.5rem;
+}
+.feature_dots {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0rem;
+}
 }

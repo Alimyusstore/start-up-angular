@@ -1,0 +1,16 @@
+<section class="testimonials">
+ <div class="section-container">
+    <h2 class="testimonials_title">Our Happy Clients</h2>
+    <div class="testimonials_grid">
+        @for(testy of testimonials; track testy.name){
+            <div class="testimonials_card">
+                <img class="card_avatar" [src]="testy.avatar" alt="{{testy.name}}">
+                <div class="card_body">
+                    <p class="card_quote">{{testy.quote}}</p>
+                    <p class="card_name">{{testy.name}}</p>
+                </div>
+            </div>
+        }
+    </div>
+ </div>
+</section>

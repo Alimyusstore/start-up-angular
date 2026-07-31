@@ -12,7 +12,7 @@
 
 .hero_arrow {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     background:none;
     color: inherit;
@@ -24,10 +24,10 @@
     color: var(--color-text-muted);
 }
 .arrow_left {
-    left: 3rem;
+    left: 7rem;
 }
 .arrow_right {
-    right: 3rem;
+    right: 7rem;
 }
 
 .hero_content {
@@ -69,4 +69,26 @@
 }
 .hero_dot.active {
     opacity: 1;
+}
+
+@media (max-width: 700px){
+
+.arrow_left {
+    left: 1rem;
+}
+.arrow_right {
+    right: 1rem;
+}
+.hero_title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.hero_description {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.hero_body {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
 }
