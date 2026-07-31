@@ -1,0 +1,106 @@
+.form{
+    background-color: var(--color-background-dark);
+    background-image: url('/asset/backgrounds/content.png');
+    min-height: 90vh;
+    margin-top: 2rem;
+}
+.form_content{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 70px 24px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:60px;
+    overflow: hidden;
+}
+.form_text{
+    flex:1;
+    max-width: 368px;
+}
+.form_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.form_subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form_card{
+    flex: 0 0 470px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 0 0 28px;
+    overflow: hidden;
+}
+
+.form_tabs{
+    display: flex;
+    justify-content: space-between;
+}
+.form_tab{
+    flex: 1;
+    padding: 12px 0;
+    background-color: var(--color-white);
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+}
+
+
+.form_tab.active{
+    color: var(--color-background-dark);
+    border-bottom: 2px solid var(--color-background-dark);
+}
+
+.form_init{
+    padding: 24px 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+}
+
+.form_group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+}
+
+.form_input{
+    padding: 12px 16px;
+    border-radius: 24px;
+    border: 1px solid var(--color-text-muted);
+    outline: none;
+    font-size: 14px;
+}
+.form_input:focus{
+border-color: var(--color-background-dark);
+}
+
+.form_divider{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   font-size: 16px;
+   color: grey;
+   opacity: 0.2;
+   margin: 4px 0;
+}
+.divider_line{
+    width: 300px;
+    height: 2px;
+    background-color: gray;
+}
+
