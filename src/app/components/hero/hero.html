@@ -1,0 +1,18 @@
+<section class="hero">
+    <button class="hero_arrow arrow_left" (click)="previousSlide()">
+&#8249;
+    </button>
+    <div class="hero_content">
+        <p class="hero_title">{{slides[activeSlide].title}}</p>
+        <h2 class="hero_description">{{slides[activeSlide].description}}</h2>
+        <p class="hero_body">{{slides[activeSlide].body}}</p>
+    <div class="hero_dots">
+        @for(slide of slides; track $index; ){
+        <span class="hero_dot" (click)="goToSlide($index)" [class.active]="activeSlide === $index"></span>
+    }
+    </div>
+    <button class="btn btn-secondary">Create an Account</button>
+    </div>
+    
+    <button class="hero_arrow arrow_right" (click)="nextSlide()"> &#8250;</button>
+</section>

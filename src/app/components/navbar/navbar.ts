@@ -12,6 +12,10 @@ import { faBrandDribbble, faBrandBehance } from '@ng-icons/font-awesome/brands';
   viewProviders: [provideIcons({ faBrandDribbble, faBrandBehance })]
 })
 export class Navbar {
+active: string = 'Home';
+  setActive(link: string) {
+    this.active = link;
+  }
 
   navLinks: string[] = ['Home', 'Features', 'Pricing', 'Blog' ];
   navIcons: string[] =  ['faBrandDribbble', 'faBrandBehance'];

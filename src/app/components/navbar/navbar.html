@@ -1,14 +1,14 @@
 <nav class="navbar">
-    <div class="navbar_context">
+    <div class="navbar_content">
 
-        <div class="navbar_link">
+        <div class="navbar_links">
             @for(link of navLinks; track link){
-                <a routerLink="{{ link | lowercase }}" href="#">{{ link }}</a>
+                <a  class="navbar_link" [class.active]="active === link" routerLink="{{ link | lowercase }}" (click)="setActive(link)">{{ link }}</a>
             }
         </div>
-        <div class="navbar_link">
+        <div class="navbar_links">
             @for(icon of navIcons; track icon){
-             <a routerLink="{{ icon | lowercase }}" href="#">
+             <a class="navbar_link" [class.active]="active === icon" routerLink="{{ icon | lowercase }}" (click)="setActive(icon)">
                 <ng-icon [name]="icon" size="25" ></ng-icon>
              </a>   
             }

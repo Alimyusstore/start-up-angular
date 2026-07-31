@@ -1,12 +1,12 @@
 .navbar {
     position:absolute;
-    top: 5rem;
+    top: 3rem;
     right:15rem;
     left: 15rem;
     z-index: 10;
 }
 
-.navbar_context{
+.navbar_content{
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
@@ -14,7 +14,7 @@
     justify-content: center;
 }
 
-.navbar_link {
+.navbar_links {
     display: flex;
     gap: 40px;
     font-size: 18px;
@@ -26,6 +26,6 @@
 a:hover{
     opacity: 80%;
 }
-a:active{
+.navbar_link.active{
     opacity: 40%;
 }

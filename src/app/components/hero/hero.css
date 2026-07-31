@@ -1,0 +1,71 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:  0 60px;
+    background-image: url('../../../../public/asset/backgrounds/landingPage.png');
+    text-align: center;
+}
+
+.hero_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background:none;
+    color: inherit;
+    font-size: 2rem;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.hero_arrow:hover {
+    color: var(--color-text-muted);
+}
+.arrow_left {
+    left: 3rem;
+}
+.arrow_right {
+    right: 3rem;
+}
+
+.hero_content {
+    max-width: 620px;
+    margin: 0 auto;
+}
+.hero_title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.hero_description {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero_body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero_dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 32px;
+}
+
+.hero_dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    background-color: var(--color-text-muted);
+    cursor: pointer;
+}
+.hero_dot.active {
+    opacity: 1;
+}
