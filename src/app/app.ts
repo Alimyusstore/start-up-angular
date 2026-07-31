@@ -6,11 +6,12 @@ import { Content } from "./components/content/content";
 import {  Features } from "./components/features/features";
 import { Forms } from "./components/forms/forms";
 import { Testimonial } from "./components/testimonial/testimonial";
+import { Cta } from "./components/cta/cta";
 
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet, Hero, Content, Features, Forms, Testimonial],
+  imports: [Navbar, RouterOutlet, Hero, Content, Features, Forms, Testimonial, Cta],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
