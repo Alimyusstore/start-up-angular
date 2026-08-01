@@ -1,0 +1,17 @@
+<section class="showcase">
+    <div class="section-container">
+        <div class="showcase_header">
+            <h2 class="showcase_title">Last works</h2>
+            <button class="showcase_view">View all Works</button>
+        </div>
+        <div class="showcase_grid">
+            @for(item of items; track item.title;){
+                <div class="showcase_item">
+                    <img [src]="item.image" alt="{{item.title}}">
+                    <p class="item_category">{{item.category}}</p>
+                    <p class="item_title">{{item.title}}</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
