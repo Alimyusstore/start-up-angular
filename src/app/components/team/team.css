@@ -1,0 +1,48 @@
+.team{
+    background-color: var(--color-background-dark);
+    min-height: 100vh;
+    margin-top: 2rem;
+}
+
+.team_title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.team_body{
+    font-size: 22px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+     max-width: 754px;
+}
+
+.team_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20;
+     max-width: 754px;
+}
+
+.team_card {
+    padding: 24px 16px;
+}
+.card_avatar {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.7rem;
+}
+.card_name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+.card_role{
+    font-size: 13px;
+    margin-bottom: 0.7rem;
+}
+
+.card_social {
+    display: flex;
+    gap: 16px;
+}

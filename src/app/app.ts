@@ -8,11 +8,12 @@ import { Forms } from "./components/forms/forms";
 import { Testimonial } from "./components/testimonial/testimonial";
 import { Cta } from "./components/cta/cta";
 import { Showcase } from "./components/showcase/showcase";
+import { Team } from "./components/team/team";
 
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, RouterOutlet, Hero, Content, Features, Forms, Testimonial, Cta, Showcase],
+  imports: [Navbar, RouterOutlet, Hero, Content, Features, Forms, Testimonial, Cta, Showcase, Team],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

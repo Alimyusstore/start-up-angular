@@ -1,0 +1,24 @@
+<section class="team">
+    <div class="section-container">
+        <h2 class="team_title">Startup Crew</h2>
+        <p class="team_body">The most important part of the Startup Framework is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks from UI Kit.</p>
+
+        <div class="team_grid">
+            @for(member of members; track member.title;){
+                <div class="team_card">
+                    <img class="card_avatar" [src]="member.avatar" alt="{{member.name}}" >
+                    <p class="card_name">{{member.name}}</p>
+                    <p class="card_role">{{member.role}}</p>
+                    <div class="card_social">
+                        @for(icon of member.social; track $index){
+                            <a href="#">
+                                <ng-icon [name]="icon" size="15"></ng-icon>
+
+                            </a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
