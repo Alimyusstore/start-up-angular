@@ -1,0 +1,125 @@
+.contact {
+    background-color: var(--color-background-dark);
+    background-image: url('/asset/backgrounds/contact.png');
+    min-height: 90vh;
+    margin-top: 2rem;
+}
+.contact_content{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 80px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px
+}
+
+
+
+.contact_title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contact_body {
+    font-size: 22px;
+    line-height: 1.7;
+    max-width: 379px;
+    margin-bottom: 1.7rem;
+}
+
+.contact_info{
+    display: flex;
+    flex-direction: column;
+    max-width: 259px;
+    gap: 1.5rem;
+}
+
+.info{
+    display: flex;
+    gap: 1rem;
+}
+.contact_card{
+    flex: 0 0 400px;
+    background: var(--color-white);
+    border-radius: 15px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #15143966;
+}
+
+.form_init{
+    display:flex ;
+    flex-direction: column;
+    gap: 1.3rem
+}
+.contact_row{
+    display: flex;
+    gap: 14px;
+}
+.contact_field {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact_field label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-primary-dark);
+}
+
+.contact_field input,
+.contact_field  textarea,
+.contact_field  select {
+    padding: 14px 18px;
+    border: 1px solid #15143966;
+    border-radius: 20px;
+    font-size: 13px;
+    resize:none;
+    outline: none
+}
+
+.contact_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+.checkbox input {
+    accent-color: var(--color-teal);
+}
+
+
+@media (max-width: 700px){
+    .contact_content{
+        flex-direction: column;
+        padding: 40px 12px;
+    }
+    .contact_title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+.contact_body {
+    font-size: 14px;
+    margin-bottom: 1.2rem;
+}
+
+.contact_info{
+      max-width: 359px;
+    gap: 0.7rem;
+}
+}

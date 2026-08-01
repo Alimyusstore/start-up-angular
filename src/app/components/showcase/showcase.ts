@@ -21,7 +21,7 @@ export class Showcase {
     {
       image: '/asset/images/sky.png',
       category:'PHOTO',
-      title:'From the Sky0',
+      title:'From the Sky',
     },
     {
       image: '/asset/images/forces.png',

@@ -1,0 +1,52 @@
+<section class="contact">
+    <div class="contact_content">
+        <div class="contact_text">
+
+            <h2 class="contact_title">Let’s Keep in Touch</h2>
+            <p class="contact_body">We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.</p>
+            <div class="contact_info">
+                @for(contact of contacts; track contact.icon;){
+                    <div  class="info">
+                        <ng-icon [name]="contact.icon" size="15"></ng-icon>
+                        <p>{{contact.text}}</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="contact_card">
+            <form #contactForm="ngForm" class="form_init" (ngSubmit)="submit(contactForm)">
+                <div class="contact_row">
+                    <div class="contact_field">
+                        <label for="name">YOUR NAME</label>
+                        <input type="text" name="name" [(ngModel)]="model.name" placeholder="First name" required>
+                    </div>
+                    <div class="contact_field">
+                        <label for="budget">BUDGET</label>
+                        <select name="budget" [(ngModel)]="model.budget">
+                            @for(budget of budgetOptions; track budget;){
+                                <option [value]="budget">{{budget}}</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                    <div class="contact_field">
+                        <label for="email">INPUT FIELD</label>
+                        <input type="email" name="email" [(ngModel)]="model.email" placeholder="name@mail.com" required>
+                    </div>
+                    <div class="contact_field">
+                        <label for="message">YOUR MESSAGE</label>
+                        <textarea name="message" [(ngModel)]="model.message" placeholder="Message" rows="4"></textarea>
+                    </div>
+                    <div class="contact_footer">
+                        <label for="isChecked" class="checkbox">
+                            <input type="checkbox" [(ngModel)]="model.isChecked" name="isChecked">
+                            Send me a copy
+                        </label>
+                        <button class="btn btn-teal" type="submit" [disabled]="contactForm.invalid">Send</button>
+                    </div>
+
+            </form>
+        </div>
+    </div>
+</section>
