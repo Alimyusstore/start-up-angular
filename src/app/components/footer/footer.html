@@ -1,0 +1,21 @@
+<footer class="footer">
+    <div class="section-container footer_top">
+        <h2 class="footer_brand">Startup 3</h2>
+        <div class="footer_social">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#"><ng-icon name="faBrandTwitter" size="15"></ng-icon></a>
+            <a href="#"><ng-icon name="faBrandFacebook" size="15"></ng-icon></a>
+            <a href="#"><ng-icon name="faBrandGoogle" size="15"></ng-icon>+</a>
+        </div>
+    </div>
+
+    <div class=" section-container footer_bottom">
+        <div class="footer_links">
+            @for(link of footerLinks; track link){
+                <a routerLink="{{link.toLowerCase()}}">{{link}}</a>
+            }
+        </div>
+        <p class="footer_copyright">&copy; {{year}} Designmodo. All rights reserved.</p>
+    </div>
+</footer>
