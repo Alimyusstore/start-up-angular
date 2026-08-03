@@ -1,0 +1,32 @@
+<section class="pricing">
+    <div class="section_container">
+        <h2 class="pricing_title">Plan &amp; Pricing</h2>
+        <p class="pricing_description">Startup Framework is free forever — you only pay for custom domain hosting or to export your site.</p>
+        <div class="pricing_cards">
+            @for(plan of plans; track plan.name){
+              <div class="pricing_card">
+                <h3 class="card_title">{{plan.name}}</h3>
+                <p class="card_price">{{plan.price}} <span>$</span></p>
+                <ul class="card_features">
+                    @for(feature of plan.features; track feature.label){
+                        <li>
+                            <span class="feature_icon">
+        @if (feature.isAvailable) {
+            <ng-icon name="FaSolidCheck" color="var(--color-teal)" size="16"></ng-icon>
+        } @else {
+            <ng-icon name=""  size="16"></ng-icon>
+        }
+    </span>
+
+                            <span [class.feature_muted]="!feature.isAvailable">
+                                {{feature.label}}
+                            </span>
+                        </li>
+                    }
+                </ul>
+                <button class="btn" [class.btn-red-light]="plan.isSelected" [class.btn-outline]="!plan.isSelected">Get Started</button>
+            </div>
+            }
+        </div>
+    </div>
+</section>

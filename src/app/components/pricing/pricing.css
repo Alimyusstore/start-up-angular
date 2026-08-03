@@ -1,0 +1,99 @@
+.pricing {
+    background-color: var(--color-background-dark);
+    background-image: url('/asset/backgrounds/pricing.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    
+}
+
+.pricing_title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+}
+
+.pricing_description {
+    font-size: 1.2rem; 
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.pricing_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    justify-content: center;
+    gap: 2rem;
+    text-align: left;
+}
+
+.pricing_card {
+    border: 1px solid var(--color-text-muted);
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.card_price {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card_price span {
+    vertical-align: top;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    margin-left: -0.5rem;
+}
+
+.card_features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+.feature_removed{
+    opacity: 0;
+}
+.card_features li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.feature_muted {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-text-muted);
+}
+
+
+@media (max-width: 768px) {
+    .pricing_cards {
+        grid-template-columns: 1fr;
+    }
+}
