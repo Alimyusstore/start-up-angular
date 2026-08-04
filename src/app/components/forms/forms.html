@@ -1,4 +1,4 @@
-<section class="form">
+<!-- <section class="form">
     <div class="form_content">
         <div class="form_text">
 
@@ -37,4 +37,46 @@
             </form>
         </div>
     </div>
+</section> -->
+
+<section class="form">
+    <div class="form_content">
+        <div class="form_text">
+
+            <h2 class="form_title">We solve digital problems with an outstanding creative flare</h2>
+            <p class="form_body">We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.</p>
+        </div>
+
+        <div class="form_card">
+            <div class="form_tabs">
+                <button class="form_tab" [class.active]="activeTab === 'signup'" (click)="setActiveTab('signup')">SIGN UP</button>
+                <button class="form_tab" [class.active]="activeTab === 'login'" (click)="setActiveTab('login')">LOGIN</button>
+            </div>
+            <form [formGroup]="forms" class="form_init" (ngSubmit)="submit()">
+                @if (activeTab === 'signup') {
+                    <div class="form_group">
+                        <input type="text" placeholder="Name..." name="name" class="form_input" formControlName="name" required>
+                        <input type="email" placeholder="Email..." name="email" class="form_input" formControlName="email" required>
+                        <input type="password" placeholder="Password..." name="password" class="form_input" formControlName="password" required>
+                        <button class="btn btn-teal" type="submit">Create an Account</button>
+                    </div>
+                } 
+                @if( activeTab === 'login') {
+
+                    <div class="form_group">
+                        <input type="email" placeholder="Email..." name="email" class="form_input" formControlName="email" required>
+                        <input type="password" placeholder="Password..." name="password" class="form_input" formControlName="password" required>
+                        <button class="btn btn-secondary"  type="submit">Login</button>
+                    </div>
+                }
+                <div class="form_divider">
+                    <div class="divider_line"></div>
+                    <p class="divider-text">or</p>
+                    <div class="divider_line"></div>
+                </div>
+                <button class="btn btn-primary"  type="button">Login via Twitter</button>
+            </form>
+        </div>
+    </div>
 </section>
+
