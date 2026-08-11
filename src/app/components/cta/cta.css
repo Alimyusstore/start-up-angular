@@ -1,4 +1,4 @@
-.cta{
+/* .cta{
     background-image: url('/asset/backgrounds/callToAction.png');
     background-color: var(--color-background-dark);
     min-height: 80vh;
@@ -39,4 +39,25 @@ gap: 20px;
     height: 44px;
     border-radius: 50%;
     color: var(--color-white);
+} */
+
+@reference '../../../styles.css';
+
+.cta {
+    @apply relative mt-8 min-h-[80vh] flex items-center justify-center px-15 py-20 text-center bg-[url('/asset/backgrounds/callToAction.png')] bg-cover bg-center bg-no-repeat bg-background-dark;
+}
+.cta_content {
+    @apply max-w-150 mx-auto grid gap-5;
+}
+.cta_title {
+    @apply sm:text-5xl text-4xl sm:font-bold font-semibold leading-tight mb-6;
+}
+.cta_body {
+    @apply sm:text-2xl text-xl sm:leading-7 leading-6 mb-6;
+}
+.cta_actions {
+    @apply flex justify-center items-center gap-4;
+}
+.cta_play {
+    @apply w-11 h-11 rounded-full text-white;
 }
