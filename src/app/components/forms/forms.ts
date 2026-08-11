@@ -6,7 +6,7 @@ import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-forms',
-  imports: [FormsModule, ReactiveFormsModule, AsyncPipe],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './forms.html',
   styleUrl: './forms.css',
 })
@@ -26,14 +26,14 @@ forms = this.fb.group({
 
   // private fb = new FormBuilder();
 
-  nameChange$ = this.forms.get('name')?.valueChanges
-  .pipe(
-    tap(name => this.logName(name))
-  );
+  // nameChange$ = this.forms.get('name')?.valueChanges
+  // .pipe(
+  //   tap(name => this.logName(name))
+  // );
 
-  logName(name?: string | null) {
-    console.log('Name changed:', name);
-  }
+  // logName(name?: string | null) {
+  //   console.log('Name changed:', name);
+  // }
 
   setActiveTab(tab: string) {
     this.activeTab = tab;

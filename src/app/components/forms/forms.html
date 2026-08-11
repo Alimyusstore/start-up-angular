@@ -52,7 +52,7 @@
                 <button class="form_tab" [class.active]="activeTab === 'signup'" (click)="setActiveTab('signup')">SIGN UP</button>
                 <button class="form_tab" [class.active]="activeTab === 'login'" (click)="setActiveTab('login')">LOGIN</button>
             </div>
-            @if(nameChange$ | async){}
+            <!-- @if(nameChange$ | async){} -->
             <form [formGroup]="forms" class="form_init" (ngSubmit)="submit()">
                 @if (activeTab === 'signup') {
                     <div class="form_group">
