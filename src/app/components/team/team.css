@@ -1,4 +1,4 @@
-.team{
+/* .team{
     background-color: var(--color-background-dark);
     min-height: 100vh;
     margin-top: 2rem;
@@ -45,4 +45,37 @@
 .card_social {
     display: flex;
     gap: 16px;
+} */
+
+@reference  '../../../styles.css';
+
+.team{
+    @apply min-h-screen mt-8 bg-background-dark;
+}
+.team_title {
+    @apply text-3xl font-bold mb-4;
+}
+
+.team_body{
+    @apply text-lg leading-7 mb-7.5 max-w-188.5;
+}
+.team_grid {
+    @apply grid grid-cols-2 sm:grid-cols-3 gap-5 max-w-188.5;
+}
+.team_card {
+    @apply px-4 py-6;
+}
+.card_avatar {
+    @apply w-16 h-16 mb-2.5;
+}
+
+.card_name {
+    @apply text-base font-semibold mb-2.5;
+}
+
+.card_role{
+    @apply text-sm mb-2.5;
+}
+.card_social {
+    @apply flex gap-4;
 }
