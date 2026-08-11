@@ -1,4 +1,4 @@
-.showcase{
+/* .showcase{
    background-color: var(--color-background-dark);
    min-height: 100vh;
    margin-top: 2rem;
@@ -64,4 +64,34 @@
     }
 
 
+} */
+
+@reference '../../../styles.css';
+
+.showcase {
+    @apply bg-background-dark min-h-screen mt-8;
+}
+.showcase_header {
+    @apply flex justify-between items-center mb-8;
+}
+.showcase_title {
+    @apply sm:text-5xl text-3xl sm:font-bold font-semibold;
+}
+.showcase_view {
+    @apply bg-transparent border border-text-muted rounded-2xl px-5 py-2 text-white sm:text-lg text-base;
+}
+.showcase_grid {
+    @apply grid sm:grid-cols-2 gap-7.5;
+}
+.showcase_item {
+    @apply flex flex-col gap-4 items-center;
+}
+.showcase_item img {
+    @apply w-full h-70;
+}
+.item_category {
+    @apply font-bold leading-6 tracking-widest text-sm;
+}
+.item_title {
+    @apply text-2xl font-semibold;
 }
