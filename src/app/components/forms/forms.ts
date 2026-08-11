@@ -1,30 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth-service';
+import { tap } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-forms',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, AsyncPipe],
   templateUrl: './forms.html',
   styleUrl: './forms.css',
 })
 export class Forms {
+  private readonly fb: FormBuilder = inject(FormBuilder);
+  private readonly authService: AuthService = inject(AuthService);
   activeTab: string = 'signup';
   // email: string = '';
   // password: string = '';
   // name: string = '';
-forms;
-
-  constructor(private fb: FormBuilder, private authService: AuthService) {
-  this.forms = this.fb.group({
+forms = this.fb.group({
     name: ['name'],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]]
   });
-  }
+
+
   // private fb = new FormBuilder();
 
+  nameChange$ = this.forms.get('name')?.valueChanges
+  .pipe(
+    tap(name => this.logName(name))
+  );
 
+  logName(name?: string | null) {
+    console.log('Name changed:', name);
+  }
 
   setActiveTab(tab: string) {
     this.activeTab = tab;

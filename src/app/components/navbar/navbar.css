@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     position:absolute;
     top: 3rem;
     right:15rem;
@@ -28,4 +28,22 @@ a:hover{
 }
 .navbar_link.active{
     opacity: 40%;
+} */
+
+@reference '../../../styles.css';
+
+.navbar {
+    @apply absolute top-12 right-60 left-60 z-10;
+}
+
+.navbar_content {
+    @apply max-w-container mx-auto flex gap-12 justify-center;
+}   
+
+.navbar_links {
+    @apply flex gap-10 text-lg font-medium leading-6 transition-colors duration-200 ease-in-out hover:opacity-80 ;
+}
+
+.navbar_link.active {
+    @apply opacity-40;
 }

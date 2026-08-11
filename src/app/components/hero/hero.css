@@ -1,4 +1,4 @@
-.hero {
+/* .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -91,4 +91,43 @@
     font-size: 1.1rem;
     line-height: 1.4;
 }
+} */
+
+@reference '../../../styles.css';
+
+.hero {
+    @apply relative min-h-screen flex items-center justify-center px-15 text-center bg-[url('/asset/backgrounds/landingPage.png')] bg-cover bg-center bg-no-repeat bg-background-dark;
 }
+.hero_arrow {
+    @apply absolute top-1/2 transform -translate-y-1/2 bg-none text-inherit text-5xl p-2 cursor-pointer hover:text-text-muted;
+}
+.arrow_left {
+    @apply left-4 sm:left-32;
+}
+.arrow_right {
+    @apply right-4 sm:right-32;
+}
+.hero_content {
+    @apply max-w-lg mx-auto;
+}
+.hero_title {
+    @apply sm:text-3xl font-bold sm:mb-4 text-xl mb-2;
+}
+
+.hero_description {
+    @apply text-3xl font-bold leading-tight mb-4 sm:text-5xl sm:mb-5;
+}
+.hero_body {
+    @apply sm:text-lg sm:leading-relaxed sm:mb-7 text-base leading-snug mb-5;
+}
+.hero_dots {
+    @apply flex justify-center gap-2 mb-8;
+}
+.hero_dot {
+    @apply w-3 h-3 rounded-full opacity-30 transition-opacity bg-text-muted cursor-pointer;
+}
+
+.hero_dot.active {
+    @apply opacity-100;
+}
+

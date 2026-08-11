@@ -1,4 +1,6 @@
-:root {
+@import 'tailwindcss';
+
+/* :root {
     --color-primary: #1DA1F2;
     --color-primary-dark: #1E0E62;
     --color-secondary: #482BE7;
@@ -9,7 +11,7 @@
     --color-red: #EA3223;
     --color-red-light: #E93A7D;
     --color-white: #FFFFFF;
-    --font-family: 'DM Sans', sans-serif;
+    --font-sans: 'DM Sans', sans-serif;
     --max-width: 1140px;
 }
 
@@ -20,7 +22,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
+    font-family: var(--font-sans);
     background-color: black;
     color: var(--color-white);
     scroll-behavior: smooth;
@@ -30,7 +32,7 @@ h1,h2,h3,p {
 }
 
 button{
-    font-family: var(--font-family);
+    font-family: var(--font-sans);
     cursor: pointer;
     border: none;
 }
@@ -73,4 +75,65 @@ a {
 .btn:hover {
     opacity: 0.8;
     transform: translateY(-2px);
+} */
+
+
+
+@theme{
+    --color-primary: #1DA1F2;
+    --color-primary-dark: #1E0E62;
+    --color-secondary: #482BE7;
+    --color-background-dark: #2F1893;
+    --color-text-dark: #141414;
+    --color-text-muted:#EBEAED;
+    --color-teal:#25DAC5;
+    --color-red: #EA3223;
+    --color-red-light: #E93A7D;
+    --font-sans: 'DM Sans', sans-serif;
+    --max-width-container: 1140px;
+}
+
+@layer base {
+    *{
+        @apply box-border;
+    }
+
+    html, body {
+        @apply m-0 p-0 font-sans bg-black text-white scroll-smooth;
+    }
+
+    h1,h2,h3,p {
+        @apply m-0;
+    }
+    button{
+        @apply font-sans cursor-pointer border-none;
+    }
+    a{
+        @apply no-underline text-inherit;
+    }
+      .section-container {
+            @apply max-w-container mx-auto px-8.75 py-22.5;
+        }
+
+        .btn {
+            @apply  px-7.5 py-3 rounded-full font-medium text-lg transition-all duration-200 ease-in-out hover:opacity-80 hover:-translate-y-0.5;
+        }
+
+        .btn-primary {
+            @apply bg-primary;
+        }
+
+        .btn-teal {
+            @apply bg-teal;
+        }
+        .btn-red {
+            @apply bg-red;
+        }
+        .btn-red-light {
+            @apply bg-red-light;
+        }
+        .btn-secondary {
+            @apply bg-secondary;
+        }
+
 }
