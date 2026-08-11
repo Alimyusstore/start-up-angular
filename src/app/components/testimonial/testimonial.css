@@ -1,4 +1,4 @@
-.testimonials{
+/* .testimonials{
     background-color: var(--color-primary-dark);
     min-height: 100vh;
     margin-top: 2rem;
@@ -54,4 +54,31 @@
     .testimonials_grid{
         grid-template-columns: 1fr;
     }
+} */
+
+@reference '../../../styles.css';
+
+.testimonials {
+    @apply bg-primary-dark min-h-screen mt-8;
+}
+.testimonials_title {
+    @apply font-bold leading-6 text-4xl mb-10;
+}
+.testimonials_grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+}
+.testimonials_card {
+    @apply flex gap-4 p-7 rounded-lg border border-secondary;
+}
+.card_avatar {
+    @apply w-18 h-18 shrink-0;
+}
+.card_body {
+    @apply px-2 flex flex-col justify-between;
+}
+.card_quote {
+    @apply text-lg leading-7 mb-3.5;
+}
+.card_name {
+    @apply text-xs tracking-widest text-secondary;
 }
