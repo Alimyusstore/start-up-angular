@@ -1,4 +1,4 @@
-.contact {
+/* .contact {
     background-color: var(--color-background-dark);
     background-image: url('/asset/backgrounds/contact.png');
     min-height: 90vh;
@@ -109,7 +109,6 @@
     }
     .contact_title {
     font-size: 20px;
-    font-weight: 700;
     margin-bottom: 0.7rem;
 }
 
@@ -122,4 +121,56 @@
       max-width: 359px;
     gap: 0.7rem;
 }
+} */
+
+@reference '../../../styles.css';
+
+.contact {
+    @apply min-h-[90vh] mt-8 bg-[url('/assets/backgrounds/contact.png')] bg-background-dark;
+}
+
+.contact_content {
+    @apply max-w-container mx-auto  sm:px-6 px-3 py-10 sm:py-20 flex sm:flex-row flex-col justify-center items-center gap-14;
+}
+.contact_title {
+    @apply sm:text-4xl text-2xl sm:font-bold font-semibold mb-4;
+}
+.contact_body {
+    @apply sm:text-2xl text-lg sm:leading-7 leading-6 max-w-95 mb-6;
+}
+
+.contact_info {
+    @apply flex flex-col max-w-95 sm:max-w-65 gap-6;
+}
+.info {
+    @apply flex gap-4;
+}
+.contact_card {
+    @apply flex-none sm:w-100 w-full bg-white rounded-xl p-7 flex flex-col gap-5 text-secondary-dark;
+}
+.form_init {
+    @apply flex flex-col gap-5;
+}
+.contact_row {
+    @apply flex gap-3.5;
+}
+.contact_field {
+    @apply flex-1 flex flex-col gap-2;
+}
+.contact_field label {
+    @apply text-xs font-bold tracking-widest text-primary-dark;
+}
+.contact_field input,
+.contact_field textarea,.contact_field select {
+    @apply px-4 py-3 border border-secondary-dark rounded-2xl text-sm resize-none outline-none;
+}
+.contact_footer {
+    @apply flex items-center justify-between mt-1;
+}
+.checkbox {
+    @apply flex items-center gap-2 text-xs;
+}
+
+.checkbox input {
+    @apply accent-teal;
 }
