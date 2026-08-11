@@ -145,7 +145,7 @@ border-color: var(--color-background-dark);
         @apply sm:text-lg text-base sm:font-normal font-light sm:leading-6 leading-5 sm:mb-8 mb-6;
     }
     .form_card {
-        @apply flex-none sm:w-117 w-full bg-white rounded-lg overflow-hidden;
+        @apply flex-none sm:w-117 w-full bg-white rounded-xl overflow-hidden pb-7;
     }
 
     .form_tabs {
@@ -175,4 +175,3 @@ border-color: var(--color-background-dark);
     .divider_line {
         @apply w-75 h-0.5 bg-gray-500;
     }
-    
