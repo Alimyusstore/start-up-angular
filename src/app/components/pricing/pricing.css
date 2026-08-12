@@ -1,4 +1,4 @@
-.pricing {
+/* .pricing {
     background-color: var(--color-background-dark);
     background-image: url('/asset/backgrounds/pricing.png');
     background-repeat: no-repeat;
@@ -96,4 +96,54 @@
     .pricing_cards {
         grid-template-columns: 1fr;
     }
+} */
+
+@reference '../../../styles.css';
+
+.pricing {
+    @apply py-16 px-8 items-center flex flex-col text-center mt-8 min-h-screen bg-[url('/asset/backgrounds/pricing.png')] bg-no-repeat bg-cover bg-background-dark;
 }
+.pricing_title {
+    @apply text-4xl font-bold mb-4;
+}
+.pricing_description{
+    @apply max-w-125 text-xl m-auto mb-12 ;
+}
+.pricing_cards{
+    @apply grid grid-cols-1 sm:grid-cols-3 justify-center gap-8 text-left;
+}
+
+.pricing_card{
+    @apply border border-text-muted rounded-xl p-12 flex flex-col transition-all transform duration-300  ease-in-out;
+}
+
+.card_title {
+    @apply mb-2 text-2xl font-semibold;
+}
+.card_price {
+    @apply mb-4 text-4xl font-bold;
+}
+
+.card_price span {
+    @apply align-top -ml-0.5 text-sm font-medium text-text-muted;
+}
+
+.card_features{
+    @apply list-none p-0 m-0 mb-6 flex-1;
+}
+
+.feature_removed{
+    @apply opacity-0;
+}
+
+.card_features li {
+    @apply flex gap-4 items-center mb-2;
+}
+
+.feature_muted {
+    @apply text-text-muted opacity-60 line-through;
+}
+.btn-outline {
+    @apply bg-transparent text-text-muted border border-text-muted;
+}
+    
