@@ -1,4 +1,4 @@
-.footer{
+/* .footer{
     background-color: var(--color-background-dark);
     display: flex;
     flex-direction: column;
@@ -51,4 +51,33 @@
         gap: 1rem;
     }
 
+} */
+
+@reference '../../../styles.css';
+
+.footer {
+    @apply bg-background-dark flex flex-col  justify-between items-center mt-8;
+}
+
+.footer_top, .footer_bottom {
+    @apply flex justify-between items-center w-full max-w-container px-4;
+}   
+
+.footer_brand {
+    @apply text-2xl
+}
+
+.footer_social{
+    @apply flex gap-5 text-sm 
+}
+
+.footer_bottom {
+    @apply text-sm pt-8 border-t border-text-muted sm:flex-row flex-col gap-1
+}
+.footer_links {
+    @apply flex gap-5
+}
+
+.footer_copyright {
+    @apply text-text-muted
 }
